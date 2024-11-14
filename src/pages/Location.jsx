@@ -4,27 +4,40 @@ import Slide from "../components/Slide";
 import Tags from "../components/Tags";
 import Star from "../components/Star";
 import Host from "../components/Host";
+import Collaps from "../components/collaps";
+import "../styles/location.scss";
 
 
 
 function Location() {
   const { id } = useParams();
-  const Location = logements.find((log) => log.id === id)
+  const Location = logements.find((log) => log.id === id);
     return (
       <>
       <Slide pictures={Location.pictures}/>
-      <div>
+      <>
         <section>
         <h1>{Location.title}</h1>
         <p>{Location.location}</p>
         <Tags tags={Location.tags} />
         </section>
-        <section>
-          <Star />
-          <Host />
+        <section className="location__details">
+          <Host host={Location.host} />
+          <Star rating={Location.rating}/>
         </section>
+
+        <div className="Location__collaps">
+        <Collaps  
+          title="Description"  
+          content={Location.description}
+          />
+          <Collaps  
+          title="Équipements"  
+          content={Location.equipments}
+          />
+        </div>
        
-      </div>
+      </>
      
       </>
     );

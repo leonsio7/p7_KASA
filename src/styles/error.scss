@@ -1,0 +1,25 @@
+.error {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 30px;
+    
+    
+    h1 {
+        font-size: 150px;
+      
+        
+    }
+
+    p {
+        color: #ff6060;
+        font-size: 25px;
+    }
+
+    span {
+        text-decoration: underline;
+        padding-bottom: 40px;
+    }
+}

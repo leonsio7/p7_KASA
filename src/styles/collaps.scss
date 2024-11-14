@@ -1,0 +1,37 @@
+.collapsContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    background-color: #fbfbfb;
+
+    h2 {
+        background-color: #ff6060;
+        padding: 10px;
+        color: white;
+        border-radius: 10px;
+        margin: 0;
+        font-size: 19px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .arrow {
+        font-size: 19px;
+        color: white;
+        transition: transform 0.3s ease;
+
+        
+        &.open {
+            transform: rotate(180deg);
+        }
+    }
+
+    .collapsContent {
+        padding: 15px;
+        color: #666;
+        font-size: 16px;
+    }
+}

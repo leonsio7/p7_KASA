@@ -1,4 +1,4 @@
-import '../styles/about.css'
+import '../styles/about.scss'
 import Banner from "../components/Banner"
 import Collaps from "../components/collaps"
 import photo from '../assets/Image_source_2.png'
@@ -8,24 +8,24 @@ function About() {
        <Banner img={photo} titre=""/>
        
         <div className="accordion">
-          <Collaps id="item1" 
+          <Collaps  
           title="Fiabilité"  
-          description="Les annonces postées sur Kasa garantissent une fiabilité totale. 
+          content="Les annonces postées sur Kasa garantissent une fiabilité totale. 
           Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."
           />
-          <Collaps id="item2" 
+          <Collaps 
           title="Respect"  
-          description="La bienveillance fait partie des valeurs fondatrices de Kasa. 
+          content="La bienveillance fait partie des valeurs fondatrices de Kasa. 
           Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." 
           />
-          <Collaps id="item3" 
+          <Collaps 
           title="Service"  
-          description="La qualité du service est au cœur de notre engagement chez Kasa. 
+          content="La qualité du service est au cœur de notre engagement chez Kasa. 
           Nous veillons à ce que chaque interaction, que ce soit avec nos hôtes ou nos locataires, soit empreinte de respect et de bienveillance."
           />
-          <Collaps id="item4" 
+          <Collaps 
           title="Sécurité"  
-          description="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, 
+          content="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, 
           chaque logement correspond aux critères de sécurité établis par nos services."
           />
          

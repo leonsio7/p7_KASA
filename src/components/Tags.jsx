@@ -1,8 +1,13 @@
-function Tags(tags) {
+import '../styles/tags.scss'
+
+function Tags({ tags }) {
     return (
-       <div className="tag">
-        tags.map{(tag) => <span className="span">{tag}</span>}
+       <div className="tagList">
+        
+        {tags.map((tag) => (<span className="span">{tag}</span>))}
+
        </div>
+        
     );
   }
   

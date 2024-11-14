@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/slide.scss";
-import "../assets/arrow_left.png";
-import "../assets/arrow_right.png";
+import previous from "../assets/previous.svg";
+import next from "../assets/next.svg";
 
 function Slide({pictures} ) {
 
@@ -10,16 +10,21 @@ function Slide({pictures} ) {
         
        <div className="Slide">
       <img src={pictures[index]} alt="Slide" />
-      <button 
+      <button className="Slide__button Slide__button--previous"
       onClick={() => (index === 0 ? setIndex(pictures.length -1) : setIndex(index -1))}>
-        {/* <img src={arrow_left} alt="backFlash" /> */} Back
+        <img src={previous} alt="backFlash" /> 
       </button>
       
-      <button
-        onClick={() => setIndex((index + 1) % pictures.length)}>
-            {/* <img src={arrow_right} alt="nextFlash" /> */} Next
+      <button className="Slide__button Slide__button--next"
+        onClick={() => index +1 === pictures.length ? setIndex(0) : setIndex(index + 1)}>
+            <img src={next} alt="nextFlash" />
 
         </button>
+
+        <div className="Slide__indicator">
+          {index + 1} / {pictures.length}
+
+        </div>
        </div>
     
     );

@@ -1,9 +1,10 @@
 import { NavLink } from "react-router-dom";
+import photo from '../assets/LOGO.png';
 function Header() {
     return (
         <header>
         <nav>
-            <div className="logo">K<span className="home-icon">🏠</span>sa</div>
+        <div><img src={photo} alt="logo" /></div>
             <ul>
                 <li><NavLink to="/">Accueil</NavLink></li>
                 <li><NavLink to="/About">À Propos</NavLink></li>
