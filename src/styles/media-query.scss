@@ -1,0 +1,137 @@
+@media (max-width: 768px) {
+    header {
+      padding: 10px;
+      nav {
+       
+        align-items: flex-start;
+        gap: 10px;
+        img {
+          height: 50px;
+        }
+        ul {
+          gap: 15px;
+          margin-top: 10px;
+          li {
+            a {
+              font-size: 16px;
+              
+            }
+          }
+        }
+      }
+    }
+    .banner {
+      img {
+        height: 120px;
+      }
+      h1 {
+        margin-top: -60px;
+        font-size: 20px;
+      }
+    }
+    .gallery {
+      .Card {
+        width: 100%; 
+
+        img {
+          height: 200px;
+        }
+        h3 {
+          font-size: 14px;
+        }
+      }
+    }
+    .accordion {
+      .accordion-header {
+        font-size: 16px;
+        padding: 10px 15px;
+      }
+      .accordion-body {
+        padding: 10px 15px;
+      }
+    }
+    .error {
+      gap: 50px;
+      h1 {
+        font-size: 100px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+    footer {
+      img {
+        width: 70px;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 10px;
+      nav {
+        img {
+          height: 35px;
+        }
+        ul {
+          gap: 10px;
+          li {
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    .banner {
+      img {
+        height: 100px;
+      }
+      h1 {
+        margin-top: -50px;
+        font-size: 16px;
+      }
+    }
+    .gallery {
+      .Card {
+        width: 100%; 
+        
+        img {
+          height: 150px; 
+          
+        }
+        h3 {
+          font-size: 12px;
+        }
+      }
+    }
+    .accordion {
+      .accordion-header {
+        font-size: 14px;
+        padding: 8px 10px;
+      }
+      .accordion-body {
+        font-size: 14px;
+        padding: 8px 10px;
+      }
+    }
+    .error {
+      h1 {
+        font-size: 80px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+    footer {
+      img {
+        width: 60px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }

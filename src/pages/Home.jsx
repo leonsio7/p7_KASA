@@ -4,15 +4,19 @@ import logements from "../data/logements.json";
 import Card from '../components/Card';
 import "../styles/gallery.scss"
 
+
 function Home() {
     return (
        <main>
         <Banner img={photo} titre="Chez vous, partout et ailleurs"/>
         <section className='gallery'>
+
+         
          
             {logements.map((item) => (
-               <Card cover={item.cover} title={item.title} id={item.id} />
+               <Card key={item.id}cover={item.cover} title={item.title} id={item.id} />
             ))}
+            
          
         
         </section>

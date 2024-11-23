@@ -1,9 +1,9 @@
 @import './styles/media-query.scss';
 
+Zum scss
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+ 
 }
 
 body {
@@ -14,51 +14,34 @@ body {
   padding: 0 5%;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
+/* Footer */
 
-a:hover {
-  color: #ff6060;
-}
 
-header {
-  background-color: white;
-  padding: 20px;
+footer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #ff6060;
-}
-
-.home-icon {
-  font-size: 24px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
+  justify-content: center;
+  background-color: #000;
+  padding: 40px;
+  color: #fff;
   gap: 20px;
-  margin-left: auto;
+  flex-direction: column;
+  
+ 
+ 
+
+  img {
+
+      width: 80px;
+     
+  }
+
+  p {
+      font-size: 14px;
+      text-align: center;
+  }
+  
 }
 
-nav a {
-  text-decoration: none;
-  color: black;
-}
 
-h1 {
-  color: #ff6060;
-}
+
