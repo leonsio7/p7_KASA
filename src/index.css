@@ -1,9 +1,5 @@
-@import './styles/media-query.scss';
-
-Zum scss
 * {
   margin: 0;
- 
 }
 
 body {
@@ -16,7 +12,6 @@ body {
 
 /* Footer */
 
-
 footer {
   display: flex;
   align-items: center;
@@ -26,22 +21,13 @@ footer {
   color: #fff;
   gap: 20px;
   flex-direction: column;
-  
- 
- 
 
   img {
-
-      width: 80px;
-     
+    width: 80px;
   }
 
   p {
-      font-size: 14px;
-      text-align: center;
+    font-size: 14px;
+    text-align: center;
   }
-  
 }
-
-
-

@@ -1,74 +1,82 @@
 .gallery {
-    flex-wrap: wrap;
-    width: 89%;
-    display: flex;
-    margin: auto;
-    gap: 30px;
-    justify-content: space-between;
-    padding: 3%;
-    border-radius: 15px;
-    background-color: rgba(246, 246, 246, 0.8);
+  flex-wrap: wrap;
+  width: 89%;
+  display: flex;
+  margin: auto;
+  gap: 30px;
+  justify-content: space-between;
+  padding: 3%;
+  border-radius: 15px;
+  background-color: rgba(246, 246, 246, 0.8);
+  position: relative;
+  top: -50px;
+
+  .Card {
+    width: 30%;
     position: relative;
-    top: -50px;
+    border-radius: 10px;
+    overflow: hidden;
 
-    .Card {
-        width: 30%;
-        position: relative;
-        border-radius: 10px;
-        overflow: hidden;
-      
-        
-
-        img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            border-radius: 10px;
-            
-            
-        }
-
-        h3 {
-            position: absolute;
-            margin-top: -50px;
-            padding-left: 20px;
-            width: 70%;
-            font-size: 12px;
-            color: white;
-            z-index: 2;
-        }
-        &::before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
-            border-radius: 10px;
-            z-index: 1;
-        }
+    img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 10px;
     }
+
+    h3 {
+      position: absolute;
+      margin-top: -50px;
+      padding-left: 20px;
+      width: 70%;
+      font-size: 12px;
+      color: white;
+      z-index: 2;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+      );
+      border-radius: 10px;
+      z-index: 1;
+    }
+  }
 }
 
+@media (max-width: 768px) {
+  .gallery {
+    .Card {
+      width: 100%;
 
+      img {
+        height: 200px;
+      }
+      h3 {
+        font-size: 14px;
+      }
+    }
+  }
+}
 
+@media (max-width: 480px) {
+  .gallery {
+    .Card {
+      width: 100%;
 
-
-
-
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-        
-
-
-        
+      img {
+        height: 150px;
+      }
+      h3 {
+        font-size: 12px;
+      }
+    }
+  }
+}

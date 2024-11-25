@@ -1,46 +1,49 @@
 .Slide {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 50px;
+
+  img {
     width: 100%;
-    height: 400px;
-    margin-bottom: 50px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  &__button {
+    position: absolute;
+    top: 30%;
+    background: none;
+    border: none;
+
+    &--previous {
+      left: 20px;
+    }
+
+    &--next {
+      right: 20px;
+    }
 
     img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 20px;
+      width: 30px;
+      margin: 60px;
+      position: relative;
+      top: -50px;
     }
+  }
 
-    &__button {
-        position: absolute;
-        top: 30%;
-        background: none;
-        border: none;
+  &__indicator {
+    position: relative;
+    bottom: 40px;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+  }
+}
 
-        &--previous {
-            left: 20px;
-        }
-
-        &--next {
-            right: 20px;
-        }
-
-        img {
-            width: 30px;
-            margin: 60px;
-            position: relative;
-            top: -50px;
-        }
-    }
-
-    &__indicator {
-        position: relative;
-        bottom: 40px;
-        color: white;
-        font-size: 12px;
-        display: flex;
-        justify-content: center;
-
-    }
-
-    
+@media (max-width: 768px) {
+  .Slide__indicator {
+    display: none;
+  }
 }

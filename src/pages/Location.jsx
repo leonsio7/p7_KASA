@@ -8,52 +8,41 @@ import Collaps from "../components/collaps";
 import "../styles/location.scss";
 import { useEffect } from "react";
 
-
-
 function Location() {
   const { id } = useParams();
   const navigate = useNavigate();
   const Location = logements.find((log) => log.id === id);
 
-useEffect (() => {
-  if (!Location) {
-    navigate("/404");
-  }
-}, [id, Location]);
+  useEffect(() => {
+    if (!Location) {
+      navigate("/404");
+    }
+  }, [id, Location]);
 
-if (!Location) return null;
+  if (!Location) return null;
 
+  return (
+    <>
+      <Slide pictures={Location.pictures} />
 
-    return (
-      
-      <>
-      <Slide pictures={Location.pictures}/>
-      <>
+      <div className="location__details">
         <section>
-        <h1>{Location.title}</h1>
-        <p>{Location.location}</p>
-        <Tags tags={Location.tags} />
+          <h1>{Location.title}</h1>
+          <p>{Location.location}</p>
+          <Tags tags={Location.tags} />
         </section>
-        <section className="location__details">
+        <section className="location__host">
           <Host host={Location.host} />
-          <Star rating={Location.rating}/>
+          <Star rating={Location.rating} />
         </section>
+      </div>
 
-        <div className="Location__collaps">
-        <Collaps  
-          title="Description"  
-          content={Location.description}
-          />
-          <Collaps  
-          title="Équipements"  
-          content={Location.equipments}
-          />
-        </div>
-       
-      </>
-     
-      </>
-    );
-  }
-  
-  export default Location;
+      <div className="Location__collaps">
+        <Collaps title="Description" content={Location.description} />
+        <Collaps title="Équipements" content={Location.equipments} />
+      </div>
+    </>
+  );
+}
+
+export default Location;

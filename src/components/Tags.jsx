@@ -1,14 +1,15 @@
-import '../styles/tags.scss'
+import "../styles/tags.scss";
 
 function Tags({ tags }) {
-    return (
-       <div className="tagList">
-        
-        {tags.map((tag, index) => (<span key={index}className="span">{tag}</span>))}
+  return (
+    <div className="tagList">
+      {tags.map((tag, index) => (
+        <span key={index} className="span">
+          {tag}
+        </span>
+      ))}
+    </div>
+  );
+}
 
-       </div>
-        
-    );
-  }
-  
-  export default Tags;
+export default Tags;

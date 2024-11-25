@@ -1,37 +1,61 @@
 .collapsContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  background-color: #fbfbfb;
+
+  h2 {
+    background-color: #ff6060;
+    padding: 12px;
+    color: white;
+    border-radius: 10px;
+    margin: 0;
+    font-size: 19px;
+    font-weight: bold;
     display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-    background-color: #fbfbfb;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
 
-    h2 {
-        background-color: #ff6060;
-        padding: 12px;
-        color: white;
-        border-radius: 10px;
-        margin: 0;
-        font-size: 19px;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        cursor: pointer;
+  .arrow {
+    font-size: 19px;
+    color: white;
+    transition: transform 0.3s ease;
+
+    &.open {
+      transform: rotate(180deg);
     }
+  }
 
-    .arrow {
-        font-size: 19px;
-        color: white;
-        transition: transform 0.3s ease;
+  .collapsContent {
+    padding: 15px;
+    color: #666;
+    font-size: 16px;
+  }
+}
 
-        
-        &.open {
-            transform: rotate(180deg);
-        }
+@media (max-width: 768px) {
+  .accordion {
+    .accordion-header {
+      font-size: 16px;
+      padding: 10px 15px;
     }
-
-    .collapsContent {
-        padding: 15px;
-        color: #666;
-        font-size: 16px;
+    .accordion-body {
+      padding: 10px 15px;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .accordion {
+    .accordion-header {
+      font-size: 14px;
+      padding: 8px 10px;
+    }
+    .accordion-body {
+      font-size: 14px;
+      padding: 8px 10px;
+    }
+  }
 }
