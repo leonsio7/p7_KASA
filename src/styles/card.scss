@@ -1,0 +1,94 @@
+.gallery {
+  flex-wrap: wrap;
+  width: 89%;
+  display: flex;
+  margin: auto;
+  gap: 41px;
+  padding: 3%;
+  border-radius: 15px;
+  background-color: rgba(246, 246, 246, 0.8);
+  position: relative;
+  top: -30px;
+  
+
+  .Card {
+    width: 29%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 350px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    h3 {
+      position: absolute;
+      bottom: 20px;
+      padding-left: 10px;
+      width: 90%;
+      font-size: 12px;
+      color: white;
+      z-index: 2;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+      );
+      border-radius: 10px;
+      z-index: 1;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    .Card {
+      width: 100%;
+      height: 300px;
+      border: none;
+      box-shadow: none;
+      background: transparent;
+      margin: 0;
+      padding: 0;
+      
+
+      &::before, .Card::after {
+        content: none;
+      }
+
+      h3 {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    background: none;
+    top: -60px;
+    .Card {
+      width: 100%;
+      height: 250px;
+
+      img {
+        height: 100%;
+      }
+      h3 {
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+}
+
+
+
+body, html {
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  background-color: white;
+  margin: 0;
+  padding-left: 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
